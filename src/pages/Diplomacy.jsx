@@ -119,7 +119,7 @@ export default function HomePage() {
         <div className="bg-[#D94141]">
             <div className="w-full max-w-screen-lg mx-auto px-4 text-xs text-gray-50 py-0.25 flex items-center space-x-2">
                 <span className="font-medium whitespace-nowrap">
-                    🛈 Thundra is currently at war with the following nations/organizations:
+                    🛈 The following nations/organizations are at war with Thundra:
                 </span>
 
                 <div className="relative overflow-hidden flex-1">
