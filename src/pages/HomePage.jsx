@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { AnimatedMenuIcon } from "@/components/AnimatedMenuIcon";
-import { Menu, X } from "lucide-react";
+import RegionSelector from "@/components/RegionSelector";
 const logo = new URL(`${import.meta.env.BASE_URL}assets/logo32x32.png`, import.meta.url).href;
 const bolt = new URL(`${import.meta.env.BASE_URL}assets/bolt128w.png`, import.meta.url).href;
 import React, { useEffect, useRef, useState } from 'react';
@@ -45,7 +45,7 @@ export default function HomePage() {
     <div className="bg-gray-50 text-gray-900">
 
       {/* Sticky Header */}
-      <div className="sticky top-0 bg-gray-50">
+      <div className="sticky top-0 bg-gray-50 z-2">
 
         {/* Top Banner */}
         <div className="w-full max-w-screen-lg mx-auto px-4 text-xs text-gray-800 py-0.25 flex items-center space-x-2">
@@ -107,6 +107,12 @@ export default function HomePage() {
       </div>
 
       {/* Main Content */}
+      <div className="flex justify-center w-full bg-gray-300">
+        <section id="map-selector" className="max-w-screen-lg w-full flex justify-center">
+          <RegionSelector />
+        </section>
+      </div>
+
       <main className="px-6 py-8 max-w-4xl mx-auto">
         <section className="mb-6">
           <h2 className="text-xl font-semibold mb-2">Welcome to the Third Republic of Thundra</h2>
