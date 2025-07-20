@@ -1,6 +1,5 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom'; // ⬅️ use HashRouter!
 import HomePage from './pages/HomePage';
 import Thundrarch from './pages/Thundrarch';
 import Infrastructure from './pages/Infrastructure';
@@ -12,14 +11,14 @@ import 'leaflet/dist/leaflet.css';
 import Drawer from './tools/PolygonDrawer';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
-      <Route path="/thundra.gov/" element={<HomePage />} />
-      <Route path="/thundra.gov/thundrarch" element={<Thundrarch />} />
-      <Route path="/thundra.gov/infrastructure" element={<Infrastructure />} />
-      <Route path="/thundra.gov/defense" element={<Defense />} />
-      <Route path="/thundra.gov/diplomacy" element={<Diplomacy />} />
-      <Route path="/thundra.gov/test" element={<Drawer />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/thundrarch" element={<Thundrarch />} />
+      <Route path="/infrastructure" element={<Infrastructure />} />
+      <Route path="/defense" element={<Defense />} />
+      <Route path="/diplomacy" element={<Diplomacy />} />
+      <Route path="/test" element={<Drawer />} />
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
