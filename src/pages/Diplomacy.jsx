@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { AnimatedMenuIcon } from "@/components/AnimatedMenuIcon";
-import logo from "@/assets/logo32x32.png";
-import bolt from "@/assets/bolt128w.png";
+import logo from `${import.meta.env.BASE_URL}assets/logo32x32.png`;
+import bolt from `${import.meta.env.BASE_URL}assets/bolt128w.png`;
 import React, { useEffect, useRef, useState } from 'react';
 
-import sanea from '@/assets/sanean_imperium.png';
-import khanate from '@/assets/tsagaan_khanate.png';
-import yalra from '@/assets/yalra.png';
-import kraftia from '@/assets/kraftia.png';
-import ritannia from '@/assets/ritannian_republic.png';
-import britannica from '@/assets/britannica.png';
-import osark from '@/assets/osark.png';
-import aglium from '@/assets/aglium_theocracy.png';
-import hollenberg from '@/assets/hollenberg.png';
+import sanea from `${import.meta.env.BASE_URL}assets/sanean_imperium.png`;
+import khanate from `${import.meta.env.BASE_URL}assets/tsagaan_khanate.png`;
+import yalra from `${import.meta.env.BASE_URL}assets/yalra.png`;
+import kraftia from `${import.meta.env.BASE_URL}assets/kraftia.png`;
+import ritannia from `${import.meta.env.BASE_URL}assets/ritannian_republic.png`;
+import britannica from `${import.meta.env.BASE_URL}assets/britannica.png`;
+import osark from `${import.meta.env.BASE_URL}assets/osark.png`;
+import aglium from `${import.meta.env.BASE_URL}assets/aglium_theocracy.png`;
+import hollenberg from `${import.meta.env.BASE_URL}assets/hollenberg.png`;
 
 import DiplomacyMap from "../components/InteractiveMap";
 
@@ -47,9 +47,9 @@ export default function HomePage() {
 
   const navItems = [
     { title: "Home", href: "/thundra.gov/" },
-    { title: "Office of the Thundrarch", href: "/thundra.gov/thundrarch" },
-    { title: "Infrastructure", href: "/thundra.gov/infrastructure" },
-    { title: "Defense", href: "/thundra.gov/defense" },
+    { title: "Office of the Thundrarch", href: "/thundra.gov/#/thundrarch" },
+    { title: "Infrastructure", href: "/thundra.gov/#/infrastructure" },
+    { title: "Defense", href: "/thundra.gov/#/defense" },
   ];
 
   return (
@@ -145,10 +145,10 @@ export default function HomePage() {
         {/* 0. Section Nav */}
         <nav className="py-2 mb-6 flex justify-center">
             <ul className="flex space-x-6 text-sm font-semibold text-gray-700">
-            <li><a href="#notices" className="hover:underline">Active Notices</a></li>
-            <li><a href="#map" className="hover:underline">Interactive Map</a></li>
-            <li><a href="#pacts" className="hover:underline">List of Defense Pacts</a></li>
-            <li><a href="#naps" className="hover:underline">List of NAPs</a></li>
+            <li><a href="#/diplomacy#notices" className="hover:underline">Active Notices</a></li>
+            <li><a href="#/diplomacy#map" className="hover:underline">Interactive Map</a></li>
+            <li><a href="#/diplomacy#pacts" className="hover:underline">List of Defense Pacts</a></li>
+            <li><a href="#/diplomacy#naps" className="hover:underline">List of NAPs</a></li>
             </ul>
         </nav>
 

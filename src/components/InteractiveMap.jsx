@@ -110,7 +110,7 @@ function parsePOIText(text) {
       x: +x,
       y: +y,
       color: COLOR_MAP[colorKey],
-      iconPath: `/src/assets/icons/${iconName}.png`,
+      iconPath: `${import.meta.env.BASE_URL}assets/icons/${iconName}.png`,
       label: tooltip,
     };
   }).filter(Boolean);
@@ -234,7 +234,7 @@ export default function InteractiveMap() {
         map.setView(map.unproject([0, 0], 0), 0);
 
         // Add tile layer with multi zoom tiles
-        L.tileLayer("/tiles/{z}/{x}/{y}.png", {
+        L.tileLayer(`${import.meta.env.BASE_URL}/tiles/{z}/{x}/{y}.png`, {
             tileSize: 128,
             minZoom: 0,
             maxZoom: 3,
@@ -296,7 +296,7 @@ export default function InteractiveMap() {
             kraterstadt1
         ], "#3a3ade", "Department of Kraterstadt");
 
-        fetch("/src/assets/pois.txt")
+        fetch(`${import.meta.env.BASE_URL}assets/pois.txt`)
         .then((res) => res.text())
         .then((text) => {
             const points = parsePOIText(text);

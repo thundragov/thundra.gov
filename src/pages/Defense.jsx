@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { AnimatedMenuIcon } from "@/components/AnimatedMenuIcon";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo32x32.png";
-import bolt from "@/assets/bolt128w.png";
+import logo from `${import.meta.env.BASE_URL}assets/logo32x32.png`;
+import bolt from `${import.meta.env.BASE_URL}assets/bolt128w.png`;
 import React, { useEffect, useRef, useState } from 'react';
 
 export default function HomePage() {
@@ -36,9 +36,9 @@ export default function HomePage() {
 
   const navItems = [
     { title: "Home", href: "/thundra.gov/" },
-    { title: "Office of the Thundrarch", href: "/thundra.gov/thundrarch" },
-    { title: "Infrastructure", href: "/thundra.gov/infrastructure" },
-    { title: "Diplomacy", href: "/thundra.gov/diplomacy" },
+    { title: "Office of the Thundrarch", href: "/thundra.gov/#/thundrarch" },
+    { title: "Infrastructure", href: "/thundra.gov/#/infrastructure" },
+    { title: "Diplomacy", href: "/thundra.gov/#/diplomacy" },
   ];
 
   return (

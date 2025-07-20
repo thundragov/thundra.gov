@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { AnimatedMenuIcon } from "@/components/AnimatedMenuIcon";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo32x32.png";
-import bolt from "@/assets/bolt128w.png";
-import thundrail from "@/assets/thundrail.svg";
+import logo from `${import.meta.env.BASE_URL}assets/logo32x32.png`;
+import bolt from `${import.meta.env.BASE_URL}assets/bolt128w.png`;
+import thundrail from `${import.meta.env.BASE_URL}assets/thundrail.svg`;
 import React, { useEffect, useRef, useState } from 'react';
 
-import economic_development from '@/assets/economic_development.png';
-import resource_abundance from '@/assets/resource_abundance.png';
-import public_transit from '@/assets/public_transit.png';
+import economic_development from `${import.meta.env.BASE_URL}assets/economic_development.png`;
+import resource_abundance from `${import.meta.env.BASE_URL}assets/resource_abundance.png`;
+import public_transit from `${import.meta.env.BASE_URL}assets/public_transit.png`;
 
-import yalra from '@/assets/yalra.png';
-import kraftia from '@/assets/kraftia.png';
-import ritannia from '@/assets/ritannian_republic.png';
-import aglium from '@/assets/aglium_theocracy.png';
+import yalra from `${import.meta.env.BASE_URL}assets/yalra.png`;
+import kraftia from `${import.meta.env.BASE_URL}assets/kraftia.png`;
+import ritannia from `${import.meta.env.BASE_URL}assets/ritannian_republic.png`;
+import aglium from `${import.meta.env.BASE_URL}assets/aglium_theocracy.png`;
 
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,9 +46,9 @@ export default function HomePage() {
 
   const navItems = [
     { title: "Home", href: "/thundra.gov/" },
-    { title: "Office of the Thundrarch", href: "/thundra.gov/thundrarch" },
-    { title: "Defense", href: "/thundra.gov/defense" },
-    { title: "Diplomacy", href: "/thundra.gov/diplomacy" },
+    { title: "Office of the Thundrarch", href: "/thundra.gov/#/thundrarch" },
+    { title: "Defense", href: "/thundra.gov/#/defense" },
+    { title: "Diplomacy", href: "/thundra.gov/#/diplomacy" },
   ];
 
   return (
@@ -142,10 +142,10 @@ export default function HomePage() {
         {/* 0. Section Nav */}
         <nav className="py-2 mb-6 flex justify-center">
             <ul className="flex space-x-6 text-sm font-semibold text-gray-700">
-            <li><a href="#mission" className="hover:underline">Our Mission</a></li>
-            <li><a href="#map" className="hover:underline">Thundrail Map</a></li>
-            <li><a href="#news" className="hover:underline">News</a></li>
-            <li><a href="#partnerships" className="hover:underline">International Partnerships</a></li>
+            <li><a href="#/infrastructure#mission" className="hover:underline">Our Mission</a></li>
+            <li><a href="#/infrastructure#map" className="hover:underline">Thundrail Map</a></li>
+            <li><a href="#/infrastructure#news" className="hover:underline">News</a></li>
+            <li><a href="#/infrastructure#partnerships" className="hover:underline">International Partnerships</a></li>
             </ul>
         </nav>
 
