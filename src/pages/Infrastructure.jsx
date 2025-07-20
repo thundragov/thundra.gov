@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { AnimatedMenuIcon } from "@/components/AnimatedMenuIcon";
 import { Menu, X } from "lucide-react";
-import logo from `${import.meta.env.BASE_URL}assets/logo32x32.png`;
-import bolt from `${import.meta.env.BASE_URL}assets/bolt128w.png`;
-import thundrail from `${import.meta.env.BASE_URL}assets/thundrail.svg`;
+const logo = new URL(`${import.meta.env.BASE_URL}assets/logo32x32.png`).href;
+const bolt = new URL(`${import.meta.env.BASE_URL}assets/bolt128w.png`).href;
+const thundrail = new URL(`${import.meta.env.BASE_URL}assets/thundrail.svg`).href;
 import React, { useEffect, useRef, useState } from 'react';
 
-import economic_development from `${import.meta.env.BASE_URL}assets/economic_development.png`;
-import resource_abundance from `${import.meta.env.BASE_URL}assets/resource_abundance.png`;
-import public_transit from `${import.meta.env.BASE_URL}assets/public_transit.png`;
+const economic_development = new URL(`${import.meta.env.BASE_URL}assets/economic_development.png`).href;
+const resource_abundance = new URL(`${import.meta.env.BASE_URL}assets/resource_abundance.png`).href;
+const public_transit = new URL(`${import.meta.env.BASE_URL}assets/public_transit.png`).href;
 
-import yalra from `${import.meta.env.BASE_URL}assets/yalra.png`;
-import kraftia from `${import.meta.env.BASE_URL}assets/kraftia.png`;
-import ritannia from `${import.meta.env.BASE_URL}assets/ritannian_republic.png`;
-import aglium from `${import.meta.env.BASE_URL}assets/aglium_theocracy.png`;
+const yalra = new URL(`${import.meta.env.BASE_URL}assets/yalra.png`).href;
+const kraftia = new URL(`${import.meta.env.BASE_URL}assets/kraftia.png`).href;
+const ritannia = new URL(`${import.meta.env.BASE_URL}assets/ritannian_republic.png`).href;
+const aglium = new URL(`${import.meta.env.BASE_URL}assets/aglium_theocracy.png`).href;
 
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);

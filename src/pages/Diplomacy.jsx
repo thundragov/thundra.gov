@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { AnimatedMenuIcon } from "@/components/AnimatedMenuIcon";
-import logo from `${import.meta.env.BASE_URL}assets/logo32x32.png`;
-import bolt from `${import.meta.env.BASE_URL}assets/bolt128w.png`;
+const logo = new URL(`${import.meta.env.BASE_URL}assets/logo32x32.png`).href;
+const bolt = new URL(`${import.meta.env.BASE_URL}assets/bolt128w.png`).href;
 import React, { useEffect, useRef, useState } from 'react';
 
-import sanea from `${import.meta.env.BASE_URL}assets/sanean_imperium.png`;
-import khanate from `${import.meta.env.BASE_URL}assets/tsagaan_khanate.png`;
-import yalra from `${import.meta.env.BASE_URL}assets/yalra.png`;
-import kraftia from `${import.meta.env.BASE_URL}assets/kraftia.png`;
-import ritannia from `${import.meta.env.BASE_URL}assets/ritannian_republic.png`;
-import britannica from `${import.meta.env.BASE_URL}assets/britannica.png`;
-import osark from `${import.meta.env.BASE_URL}assets/osark.png`;
-import aglium from `${import.meta.env.BASE_URL}assets/aglium_theocracy.png`;
-import hollenberg from `${import.meta.env.BASE_URL}assets/hollenberg.png`;
+const sanea = new URL(`${import.meta.env.BASE_URL}assets/sanean_imperium.png`).href;
+const khanate = new URL(`${import.meta.env.BASE_URL}assets/tsagaan_khanate.png`).href;
+const yalra = new URL(`${import.meta.env.BASE_URL}assets/yalra.png`).href;
+const kraftia = new URL(`${import.meta.env.BASE_URL}assets/kraftia.png`).href;
+const ritannia = new URL(`${import.meta.env.BASE_URL}assets/ritannian_republic.png`).href;
+const britannica = new URL(`${import.meta.env.BASE_URL}assets/britannica.png`).href;
+const osark = new URL(`${import.meta.env.BASE_URL}assets/osark.png`).href;
+const aglium = new URL(`${import.meta.env.BASE_URL}assets/aglium_theocracy.png`).href;
+const hollenberg = new URL(`${import.meta.env.BASE_URL}assets/hollenberg.png`).href;
 
 import DiplomacyMap from "../components/InteractiveMap";
 
