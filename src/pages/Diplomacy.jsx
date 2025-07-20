@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { AnimatedMenuIcon } from "@/components/AnimatedMenuIcon";
-const logo = new URL(`${import.meta.env.BASE_URL}assets/logo32x32.png`).href;
-const bolt = new URL(`${import.meta.env.BASE_URL}assets/bolt128w.png`).href;
+const logo = new URL(`${import.meta.env.BASE_URL}assets/logo32x32.png`, import.meta.url).href;
+const bolt = new URL(`${import.meta.env.BASE_URL}assets/bolt128w.png`, import.meta.url).href;
 import React, { useEffect, useRef, useState } from 'react';
 
-const sanea = new URL(`${import.meta.env.BASE_URL}assets/sanean_imperium.png`).href;
-const khanate = new URL(`${import.meta.env.BASE_URL}assets/tsagaan_khanate.png`).href;
-const yalra = new URL(`${import.meta.env.BASE_URL}assets/yalra.png`).href;
-const kraftia = new URL(`${import.meta.env.BASE_URL}assets/kraftia.png`).href;
-const ritannia = new URL(`${import.meta.env.BASE_URL}assets/ritannian_republic.png`).href;
-const britannica = new URL(`${import.meta.env.BASE_URL}assets/britannica.png`).href;
-const osark = new URL(`${import.meta.env.BASE_URL}assets/osark.png`).href;
-const aglium = new URL(`${import.meta.env.BASE_URL}assets/aglium_theocracy.png`).href;
-const hollenberg = new URL(`${import.meta.env.BASE_URL}assets/hollenberg.png`).href;
+const sanea = new URL(`${import.meta.env.BASE_URL}assets/sanean_imperium.png`, import.meta.url).href;
+const khanate = new URL(`${import.meta.env.BASE_URL}assets/tsagaan_khanate.png`, import.meta.url).href;
+const yalra = new URL(`${import.meta.env.BASE_URL}assets/yalra.png`, import.meta.url).href;
+const kraftia = new URL(`${import.meta.env.BASE_URL}assets/kraftia.png`, import.meta.url).href;
+const ritannia = new URL(`${import.meta.env.BASE_URL}assets/ritannian_republic.png`, import.meta.url).href;
+const britannica = new URL(`${import.meta.env.BASE_URL}assets/britannica.png`, import.meta.url).href;
+const osark = new URL(`${import.meta.env.BASE_URL}assets/osark.png`, import.meta.url).href;
+const aglium = new URL(`${import.meta.env.BASE_URL}assets/aglium_theocracy.png`, import.meta.url).href;
+const hollenberg = new URL(`${import.meta.env.BASE_URL}assets/hollenberg.png`, import.meta.url).href;
 
 import DiplomacyMap from "../components/InteractiveMap";
 
@@ -153,7 +153,7 @@ export default function HomePage() {
         </nav>
 
         {/* 1. ACTIVE NOTICES */}
-        <section id="notices" className="space-y-5 scroll-mt-36 w-full max-w-6xl mx-auto px-4">
+        <section id="/diplomacy#notices" className="space-y-5 scroll-mt-36 w-full max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-800 font-serif">Active Notices</h2>
           <ul className="list-disc list-inside">
             <li><b>July 18:</b> After rejecting the Treaty of Eiluran, the Coalition has proposed the <a href="https://docs.google.com/document/d/1FWa9OwQK5BgXYlP7I5vUQoupXS7cpgB63_awA9f8wMs" target="_blank" className="text-blue-700 underline">Treaty of Arwyn</a>. All Thundrans are encouraged to read it ahead of negotiations later this week.</li>
@@ -163,7 +163,7 @@ export default function HomePage() {
         </section>
 
         {/* 2. INTERACTIVE MAP */}
-        <section id="map" className="space-y-5 scroll-mt-36 w-full max-w-6xl mx-auto px-4">
+        <section id="/diplomacy#map" className="space-y-5 scroll-mt-36 w-full max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-800 font-serif">Interactive Map</h2>
           <div className="flex justify-center">
             <div className="rounded-md shadow p-2 border border-gray-300 w-[896px]">
@@ -173,7 +173,7 @@ export default function HomePage() {
         </section>
 
         {/* 3. DEFENSE PACTS */}
-        <section id="pacts" className="scroll-mt-36">
+        <section id="/diplomacy#pacts" className="scroll-mt-36">
             <h2 className="text-3xl font-bold text-gray-800 mb-6 font-serif">Defense Pacts</h2>
             <div className="grid md:grid-cols-2 gap-8 text-gray-700">
             <div>
@@ -201,7 +201,7 @@ export default function HomePage() {
         </section>
 
         {/* 4. NON-AGGRESSION PACTS */}
-        <section id="naps" className="scroll-mt-36">
+        <section id="/diplomacy#naps" className="scroll-mt-36">
             <h2 className="text-3xl font-bold text-gray-800 mb-6 font-serif">Non-Aggression Pacts</h2>
             <p className="pb-3">In addition to non-aggression terms in all mutual defense treaties, the Fourth Republic of Thundra has entered into non-aggression pacts with the follwoing nations:</p>
             <div className="grid md:grid-cols-2 gap-8 text-gray-700">

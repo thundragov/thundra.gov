@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { AnimatedMenuIcon } from "@/components/AnimatedMenuIcon";
 import { Menu, X } from "lucide-react";
-const logo = new URL(`${import.meta.env.BASE_URL}assets/logo32x32.png`).href;
-const bolt = new URL(`${import.meta.env.BASE_URL}assets/bolt128w.png`).href;
+const logo = new URL(`${import.meta.env.BASE_URL}assets/logo32x32.png`, import.meta.url).href;
+const bolt = new URL(`${import.meta.env.BASE_URL}assets/bolt128w.png`, import.meta.url).href;
 import React, { useEffect, useRef, useState } from 'react';
 
 export default function HomePage() {

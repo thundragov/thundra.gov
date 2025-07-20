@@ -27,7 +27,7 @@ export default function DrawingMap() {
     map.setView(map.unproject([437, 312], 0), 0);
 
     // Add your map tiles
-    L.tileLayer("/tiles/{z}/{x}/{y}.png", {
+    L.tileLayer(`${import.meta.env.BASE_URL}/tiles/{z}/{x}/{y}.png`, {
       tileSize: 128,
       minZoom: 0,
       maxZoom: 3,

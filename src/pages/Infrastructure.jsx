@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { AnimatedMenuIcon } from "@/components/AnimatedMenuIcon";
 import { Menu, X } from "lucide-react";
-const logo = new URL(`${import.meta.env.BASE_URL}assets/logo32x32.png`).href;
-const bolt = new URL(`${import.meta.env.BASE_URL}assets/bolt128w.png`).href;
-const thundrail = new URL(`${import.meta.env.BASE_URL}assets/thundrail.svg`).href;
+const logo = new URL(`${import.meta.env.BASE_URL}assets/logo32x32.png`, import.meta.url).href;
+const bolt = new URL(`${import.meta.env.BASE_URL}assets/bolt128w.png`, import.meta.url).href;
+const thundrail = new URL(`${import.meta.env.BASE_URL}assets/thundrail.svg`, import.meta.url).href;
 import React, { useEffect, useRef, useState } from 'react';
 
-const economic_development = new URL(`${import.meta.env.BASE_URL}assets/economic_development.png`).href;
-const resource_abundance = new URL(`${import.meta.env.BASE_URL}assets/resource_abundance.png`).href;
-const public_transit = new URL(`${import.meta.env.BASE_URL}assets/public_transit.png`).href;
+const economic_development = new URL(`${import.meta.env.BASE_URL}assets/economic_development.png`, import.meta.url).href;
+const resource_abundance = new URL(`${import.meta.env.BASE_URL}assets/resource_abundance.png`, import.meta.url).href;
+const public_transit = new URL(`${import.meta.env.BASE_URL}assets/public_transit.png`, import.meta.url).href;
 
-const yalra = new URL(`${import.meta.env.BASE_URL}assets/yalra.png`).href;
-const kraftia = new URL(`${import.meta.env.BASE_URL}assets/kraftia.png`).href;
-const ritannia = new URL(`${import.meta.env.BASE_URL}assets/ritannian_republic.png`).href;
-const aglium = new URL(`${import.meta.env.BASE_URL}assets/aglium_theocracy.png`).href;
+const yalra = new URL(`${import.meta.env.BASE_URL}assets/yalra.png`, import.meta.url).href;
+const kraftia = new URL(`${import.meta.env.BASE_URL}assets/kraftia.png`, import.meta.url).href;
+const ritannia = new URL(`${import.meta.env.BASE_URL}assets/ritannian_republic.png`, import.meta.url).href;
+const aglium = new URL(`${import.meta.env.BASE_URL}assets/aglium_theocracy.png`, import.meta.url).href;
 
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -150,7 +150,7 @@ export default function HomePage() {
         </nav>
 
         {/* 1. OUR MISSION */}
-        <section id="mission" className="space-y-5 scroll-mt-36">
+        <section id="/infrastructure#mission" className="space-y-5 scroll-mt-36">
             <h2 className="text-3xl font-bold text-gray-800 font-serif">Our Mission</h2>
             <blockquote className="border-l-4 border-blue-700 pl-4 text-lg italic text-gray-700">
                 “To build national unity by bringing economic development, resource abundance, and public transit to the farthest reaches of the Republic.”
@@ -192,7 +192,7 @@ export default function HomePage() {
         </section>
 
         {/* 2. THUNDRAIL MAP */}
-        <section id="map" className="scroll-mt-36">
+        <section id="/infrastructure#map" className="scroll-mt-36">
             <h2 className="text-3xl font-bold text-gray-800 mb-4 font-serif">Thundrail Map</h2>
             <div className="overflow-x-auto w-full flex justify-center">
                 <img src={thundrail} alt="Thundrail Map" className="w-9/10 rounded shadow" />
@@ -201,13 +201,13 @@ export default function HomePage() {
         </section>
 
         {/* 3. NEWS */}
-        <section id="news" className="scroll-mt-36">
+        <section id="/infrastructure#news" className="scroll-mt-36">
             <h2 className="text-3xl font-bold text-gray-800 mb-4 font-serif">News</h2>
             <p className="text-gray-600">Coming soon: national infrastructure updates, project launches, and more.</p>
         </section>
 
         {/* 4. INTERNATIONAL PARTNERSHIPS */}
-        <section id="partnerships" className="scroll-mt-36">
+        <section id="/infrastructure#partnerships" className="scroll-mt-36">
             <h2 className="text-3xl font-bold text-gray-800 mb-6 font-serif">International Partnerships</h2>
             <div className="grid md:grid-cols-2 gap-8 text-gray-700">
             <div>
