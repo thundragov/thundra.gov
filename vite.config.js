@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [
     react()
   ],
+  base: '/thundra.gov/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
