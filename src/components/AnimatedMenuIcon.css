@@ -1,0 +1,35 @@
+.hamburger-wrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.4s ease;
+  padding: 4px 0; /* Optional: adjusts space between bars */
+  box-sizing: border-box;
+}
+
+.bar {
+  width: 24px;
+  height: 2px;
+  background-color: black;
+  border-radius: 1px;
+}
+
+.rotate-left {
+  transform: rotate(-45deg);
+}
+
+.rotate-right {
+  transform: rotate(45deg);
+}

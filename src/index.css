@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@keyframes marquee-loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  display: inline-flex;
+  animation: marquee-loop 20s linear infinite;
+}
+
+.leaflet-div-icon.leaflet-editing-icon {
+  width: 6px !important;
+  height: 6px !important;
+  margin-left: -3px !important;
+  margin-top: -3px !important;
+  border-radius: 50%;
+  background-color: #3388ff;
+  border: 1px solid white;
+  box-shadow: none;
+}
+
+.leaflet-tooltip.custom-poi-tooltip {
+  background-color: gray-50;
+  color: #333;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 4px 7px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+}
