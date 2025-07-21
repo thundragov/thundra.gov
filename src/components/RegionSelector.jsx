@@ -197,7 +197,38 @@ export function polygonToSVG(
 }
 
 const RegionSelector = () => {
-  const [selectedRegion, setSelectedRegion] = useState("lendifika");
+  const regionList = [
+    "lendifika", "crannog", "scalding", "donrs", "vodrvay", "nortifika", "oakland", "lysobor", "eiluran", "cauldra", "fjt", "zovikael", "kraterstadt"
+    ]
+
+    const [selectedRegion, setSelectedRegion] = useState("lendifika");
+    const intervalRef = useRef(null);
+
+    // 🔁 Pick a random region that's not the current one
+    const pickRandomRegion = () => {
+        let nextRegion = selectedRegion;
+        while (nextRegion === selectedRegion) {
+        const randomIndex = Math.floor(Math.random() * regionList.length);
+        nextRegion = regionList[randomIndex];
+        }
+        setSelectedRegion(nextRegion);
+    };
+
+    // ⏱️ Set up and reset interval
+    useEffect(() => {
+        if (intervalRef.current) clearInterval(intervalRef.current);
+
+        intervalRef.current = setInterval(() => {
+        pickRandomRegion();
+        }, 10000); // every 15 seconds
+
+        return () => clearInterval(intervalRef.current);
+    }, [selectedRegion]);
+
+    // 🖱️ Manual selection resets the timer
+    const handleClick = (regionId) => {
+        setSelectedRegion(regionId);
+    };
 
   const regions = [
     { id: "lendifika", label: "Lendifika", svg: polygonToSVG([lendifika1, lendifika2, lendifika3, lendifika4, lendifika5]) },
@@ -215,12 +246,8 @@ const RegionSelector = () => {
     { id: "kraterstadt", label: "Kraterstadt", svg: polygonToSVG([kraterstadt1]) },
   ];
 
-  const handleClick = (regionId) => {
-    setSelectedRegion(regionId);
-  };
-
   const regionTitles = {
-    lendifika: <p className="font-sans-serif text-4xl [text-shadow:_1px_2px_4px_rgb(0_0_0_/_0.8)]"><i className="font-serif">Join</i> <span className="text-2xl font-sans-serif">the Department of</span> <span className="text-4xl font-sans-serif">Lendifika</span></p>,
+    lendifika: <p className="font-sans-serif text-4xl [text-shadow:_1px_2px_4px_rgb(0_0_0_/_0.8)]"><i className="font-serif">See</i> <span className="text-2xl font-sans-serif">the Department of</span> <span className="text-4xl font-sans-serif">Lendifika</span></p>,
     crannog: <p className="font-sans-serif text-4xl [text-shadow:_1px_2px_4px_rgb(0_0_0_/_0.8)]"><i className="font-serif">Survive</i> <span className="text-2xl font-sans-serif">the Department of</span> <span className="text-4xl font-sans-serif">Crannoghold</span></p>,
     scalding: <p className="font-sans-serif text-4xl [text-shadow:_1px_2px_4px_rgb(0_0_0_/_0.8)]"><i className="font-serif">Glimpse</i> <span className="text-2xl font-sans-serif">the</span> <span className="text-4xl font-sans-serif">Scalding Blade</span> <span className="text-2xl font-sans-serif">Territory</span></p>,
     donrs: <p className="font-sans-serif text-4xl [text-shadow:_1px_2px_4px_rgb(0_0_0_/_0.8)]"><i className="font-serif">Pilgrimage to</i> <span className="text-2xl font-sans-serif">the Department of</span> <span className="text-4xl font-sans-serif">Donr's Gift</span></p>,
@@ -238,7 +265,7 @@ const RegionSelector = () => {
   const regionImages = {
     lendifika: new URL(`${import.meta.env.BASE_URL}assets/lendifika.png`, import.meta.url).href,
     crannog: new URL(`${import.meta.env.BASE_URL}assets/crannog.png`, import.meta.url).href,
-    scalding: new URL(`${import.meta.env.BASE_URL}assets/economic_development.png`, import.meta.url).href,
+    scalding: new URL(`${import.meta.env.BASE_URL}assets/scalding.png`, import.meta.url).href,
     donrs: new URL(`${import.meta.env.BASE_URL}assets/donrs.png`, import.meta.url).href,
     vodrvay: new URL(`${import.meta.env.BASE_URL}assets/vodrvay.png`, import.meta.url).href,
     nortifika: new URL(`${import.meta.env.BASE_URL}assets/nortifika.png`, import.meta.url).href,
