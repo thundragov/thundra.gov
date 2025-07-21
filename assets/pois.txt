@@ -21,3 +21,4 @@
 416, 500, 2025, 7, 20, gray, statement, "Durnath rejects the Kurutuki ultimatum"
 375, 539, 2025, 7, 20, red, swords, "Kurutuk, Alfama, and Hollenberg declare war against Durnath"
 818, 43, 2025, 7, 20, brown, diamond, "Osark demands debt payments from Durnath."
+375, 535, 2025, 7, 20, red, stop, "Denas Arani, including rail lines, has been closed due to a state of emergency"
