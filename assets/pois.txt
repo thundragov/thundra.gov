@@ -17,4 +17,7 @@
 323, 331, 2025, 7, 18, purple, statement, "Ritannia rejects the 'Treaty of Interdam'"
 404, 474, 2025, 7, 19, yellow, pray, "A Pyrannist sermon was held"
 485, 304, 2025, 7, 19, brown, map, "Sprusia cedes land to Osark to build a trading outpost"
-373, 535, 2025, 7, 19, red, treaty, "Kurutuk, Alfama, and Hollenberg issue an ultimatum against Durnath demanding territory and removal of builds"
+371, 537, 2025, 7, 19, red, treaty, "Kurutuk, Alfama, and Hollenberg issue an ultimatum against Durnath demanding territory and removal of builds"
+416, 500, 2025, 7, 20, gray, statement, "Durnath rejects the Kurutuki ultimatum"
+375, 539, 2025, 7, 20, red, swords, "Kurutuk, Alfama, and Hollenberg declare war against Durnath"
+818, 43, 2025, 7, 20, brown, diamond, "Osark demands debt payments from Durnath."
