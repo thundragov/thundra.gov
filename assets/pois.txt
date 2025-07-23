@@ -28,3 +28,6 @@
 805, 125, 2025, 7, 21, brown, down, "Britannica leaves the Northeastern Union"
 385, 286, 2025, 7, 21, neutral, statement, "Server ownership has been transferred to Rain and Lily"
 390, 296, 2025, 7, 21, neutral, badmin, "Nex has been reallowed onto the server"
+487, 370, 2025, 7, 21, orange, up, "Exárkij Baldomero Cabral of New Anneimd temporarily leads Sprúsia"
+802, 129, 2025, 7, 21, purple, crowd, "Alexander Smith of the Liberalist party was elected the new Britannican Prime Minister"
+314, 132, 2025, 7, 22, blue, treaty, "Thundra announces the 'Second Treaty of Schönquelle,' ending the war with Hollenberg"
